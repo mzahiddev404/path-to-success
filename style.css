@@ -1,0 +1,177 @@
+/* CSS BY Muhammad Zahid */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --teal: #4CA7C0;
+  --purple: #484FB7;
+  --lavender: #6B8FE7;
+  --yellow: #E9BB57;
+  --pink: #D9526F;
+  --dark-gray: #1E1E1E;
+  --white: #ffffff;
+
+  --font-heading: 'Kavoon', cursive;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+body {
+  font-family: var(--font-body);
+  max-width: 450px;
+  margin: auto;
+  background-color: var(--lavender);
+  color: var(--dark-gray);
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 1rem;
+}
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 3em;
+}
+header p {
+  font-size: 1em;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--yellow);
+  padding: 1rem;
+  text-align: center;
+}
+nav h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+}
+nav ul {
+  list-style: none;
+}
+nav a {
+  display: block;
+  background-color: var(--white);
+  color: var(--purple);
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 1rem;
+}
+section h2 {
+  font-family: var(--font-heading);
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+  margin: 1rem 0 0.5rem;
+}
+h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15em;
+  margin-bottom: 0.5rem;
+}
+
+/* Service Cards */
+article {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+article img {
+  width: 50px;
+  margin-bottom: 0.5rem;
+}
+
+/* Why Choose Us */
+#why ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  list-style: none;
+}
+#why li {
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 6px;
+  color: var(--white);
+  font-weight: bold;
+}
+#why li:nth-child(1) { background-color: var(--teal); }
+#why li:nth-child(2) { background-color: var(--purple); }
+#why li:nth-child(3) { background-color: var(--yellow); color: var(--dark-gray); }
+#why li:nth-child(4) { background-color: var(--white); color: var(--dark-gray); border: 1px solid var(--dark-gray); }
+
+/* Pricing Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+thead {
+  background-color: var(--yellow);
+  color: var(--dark-gray);
+}
+td, th {
+  border: 1px solid var(--dark-gray);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* Call to Action */
+#contact {
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+#contact h2 {
+  font-size: 2em;
+}
+#contact a.cta {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--dark-gray);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+footer a {
+  color: var(--white);
+  font-size: 0.9em;
+}
