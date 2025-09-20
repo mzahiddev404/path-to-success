@@ -28,7 +28,7 @@
 body {
   font-family: var(--font-body);
   max-width: 450px;
-  margin: auto;
+  margin: 0 auto;
   background-color: var(--lavender);
   color: var(--dark-gray);
   line-height: 1.5;
@@ -41,12 +41,15 @@ header {
   color: var(--white);
   padding: 1rem;
 }
+
 header h1 {
   font-family: var(--font-heading);
   font-size: 3em;
 }
+
 header p {
   font-size: 1em;
+  margin-top: 0.5rem;
 }
 
 /* Navigation */
@@ -55,15 +58,18 @@ nav {
   padding: 1rem;
   text-align: center;
 }
+
 nav h2 {
   font-family: var(--font-heading);
   font-size: 1.5em;
   margin-bottom: 1rem;
   color: var(--dark-gray);
 }
+
 nav ul {
   list-style: none;
 }
+
 nav a {
   display: block;
   background-color: var(--white);
@@ -79,67 +85,130 @@ nav a {
 section {
   padding: 1rem;
 }
+
 section h2 {
   font-family: var(--font-heading);
   font-size: 2em;
   margin-bottom: 1rem;
 }
+
+/* Subheadings */
 h3 {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 1.5em;
   margin: 1rem 0 0.5rem;
 }
+
 h4 {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 1.15em;
   margin-bottom: 0.5rem;
 }
 
-/* Service Cards */
-article {
-  background-color: var(--white);
-  padding: 1rem;
+/* Services */
+#services {
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 2rem 1rem;
   border-radius: 8px;
+}
+
+#services > h3 {
+  color: var(--yellow);
+}
+
+#services article {
+  background-color: var(--white);
+  color: var(--dark-gray);
+  border-radius: 8px;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
-article img {
+
+#services article h3,
+#services article h4 {
+  color: var(--purple);
+}
+
+#services article img {
   width: 50px;
   margin-bottom: 0.5rem;
 }
 
 /* Why Choose Us */
+#why {
+  background-color: var(--pink);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
 #why ul {
+  list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-  list-style: none;
+  gap: 1rem;
+  padding: 0;
 }
-#why li {
-  padding: 0.75rem;
-  text-align: center;
-  border-radius: 6px;
-  color: var(--white);
-  font-weight: bold;
-}
-#why li:nth-child(1) { background-color: var(--teal); }
-#why li:nth-child(2) { background-color: var(--purple); }
-#why li:nth-child(3) { background-color: var(--yellow); color: var(--dark-gray); }
-#why li:nth-child(4) { background-color: var(--white); color: var(--dark-gray); border: 1px solid var(--dark-gray); }
 
-/* Pricing Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
+#why li {
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark-gray);
+  border: none;
 }
-thead {
+
+#why li:nth-child(1) { background-color: var(--teal); }
+#why li:nth-child(2) { background-color: var(--lavender); }
+#why li:nth-child(3) { background-color: var(--yellow); }
+#why li:nth-child(4) { background-color: var(--white); }
+
+/* Pricing */
+#pricing {
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+
+#pricing > h3 {
+  color: var(--yellow);
+  font-family: var(--font-body);
+}
+
+#pricing table {
+  width: 80%;
+  margin: 0 auto 1.5rem;
+  border-collapse: collapse;
+  background-color: var(--white);
+  color: var(--dark-gray);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Table headers */
+#pricing thead th {
   background-color: var(--yellow);
   color: var(--dark-gray);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.6rem;
+  border: 1px solid var(--yellow); /* gold border */
 }
-td, th {
-  border: 1px solid var(--dark-gray);
-  padding: 0.5rem;
+
+/* Table cells */
+#pricing td {
+  border: 1px solid var(--yellow); /* gold border */
+  padding: 0.7rem 0.9rem;
   text-align: left;
+}
+
+#pricing td:last-child {
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* Call to Action */
@@ -150,28 +219,41 @@ td, th {
   border-radius: 8px;
   text-align: center;
 }
+
 #contact h2 {
   font-size: 2em;
+  margin-bottom: 1rem;
 }
-#contact a.cta {
+
+#contact .cta {
   display: inline-block;
   background-color: var(--white);
   color: var(--dark-gray);
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
   margin-top: 1rem;
+  box-shadow: none;
+  width: auto;
 }
 
 /* Footer */
 footer {
   background-color: var(--purple);
   color: var(--white);
-  text-align: center;
   padding: 1rem;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+footer p {
+  margin: 0;
+}
+
 footer a {
   color: var(--white);
-  font-size: 0.9em;
+  text-decoration: underline;
 }
